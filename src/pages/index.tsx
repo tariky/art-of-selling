@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const cardVariants: Variants = {
 	offscreen: {
@@ -40,67 +41,56 @@ export default function Home() {
 					</Heading>
 				</HStack>
 				<Stack spacing={16}>
-					<motion.div
-						initial="offscreen"
-						whileInView="onscreen"
-						viewport={{ once: true, amount: 0.8 }}
-					>
-						<div className="splash" style={{ background }} />
-						<motion.div className="card" variants={cardVariants}>
-							<Stack mt={2} spacing={8}>
-								<Heading fontWeight={"black"} lineHeight={"10"}>
-									<Highlight
-										query={[
-											"Fokusirani",
-											"prodaju",
-											"skladišta",
-											"podršku",
-											"štedite",
-										]}
-										styles={{
-											color: "yellow.300",
-										}}
-									>
-										Fokusirani na web prodaju, organizaciju skladišta
-										i korisničku podršku. Sa nama štedite novac i
-										vrijeme
-									</Highlight>
-								</Heading>
-								<Text
-									fontSize={"lg"}
-									lineHeight={"7"}
-									fontWeight={"medium"}
-								>
-									Art of Selling je programski paket dizajniran za
-									social media online trgovine. Naši programi su
-									intutivni i jednostavi za korištenje. Vaše kolege i
-									kupci ce uživati prilikom korištenja naših programa.
-								</Text>
-
-								<Button size={"lg"} colorScheme={"blue"}>
-									Kontaktiraj nas
-								</Button>
-								<motion.div
-									animate={{ y: 40 }}
-									transition={{
-										delay: 1,
-										repeat: 5,
-										repeatDelay: 1,
-										ease: "easeIn",
-									}}
-								>
-									<HStack justify={"center"}>
-										<IconButton
-											aria-label="scroll down"
-											icon={<ArrowDownIcon />}
-											borderRadius={"full"}
-											colorScheme={"yellow"}
-										/>
-									</HStack>
-								</motion.div>
-							</Stack>
+					<Stack spacing={8}>
+						<Image
+							alt="slide-1"
+							src={"/slide-1.png"}
+							width={1000}
+							height={500}
+						/>
+						<Heading fontWeight={"black"} lineHeight={"10"}>
+							<Highlight
+								query={[
+									"Fokusirani",
+									"prodaju",
+									"skladišta",
+									"podršku",
+									"štedite",
+								]}
+								styles={{
+									color: "yellow.300",
+								}}
+							>
+								Fokusirani na web prodaju, organizaciju skladišta i
+								korisničku podršku. Sa nama štedite novac i vrijeme
+							</Highlight>
+						</Heading>
+						<Text fontSize={"lg"} lineHeight={"7"} fontWeight={"medium"}>
+							Art of Selling je programski paket dizajniran za social
+							media online trgovine. Naši programi su intutivni i
+							jednostavi za korištenje. Vaše kolege i kupci ce uživati
+							prilikom korištenja naših programa.
+						</Text>
+						<motion.div
+							animate={{ y: 10 }}
+							transition={{
+								delay: 1,
+								repeat: 5,
+								repeatDelay: 1,
+								ease: "easeIn",
+							}}
+						>
+							<HStack justify={"center"}>
+								<IconButton
+									aria-label="scroll down"
+									icon={<ArrowDownIcon />}
+									borderRadius={"full"}
+									colorScheme={"yellow"}
+								/>
+							</HStack>
 						</motion.div>
-					</motion.div>
+					</Stack>
+
 					<motion.div
 						initial="offscreen"
 						whileInView="onscreen"
@@ -110,6 +100,12 @@ export default function Home() {
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
 								<Stack>
+									<Image
+										alt="slide-1"
+										src={"/slide-2.png"}
+										width={1000}
+										height={500}
+									/>
 									<Heading
 										fontSize={"xl"}
 										fontFamily={"sans-serif"}
@@ -154,6 +150,12 @@ export default function Home() {
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
 								<Stack>
+									<Image
+										alt="slide-1"
+										src={"/slide-3.png"}
+										width={1000}
+										height={500}
+									/>
 									<Heading
 										fontSize={"xl"}
 										fontFamily={"sans-serif"}
@@ -204,6 +206,12 @@ export default function Home() {
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
 								<Stack>
+									<Image
+										alt="slide-1"
+										src={"/slide-4.png"}
+										width={1000}
+										height={500}
+									/>
 									<Heading
 										fontSize={"xl"}
 										fontFamily={"sans-serif"}
@@ -254,6 +262,12 @@ export default function Home() {
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
 								<Stack>
+									<Image
+										alt="slide-1"
+										src={"/slide-5.png"}
+										width={1000}
+										height={500}
+									/>
 									<Heading
 										fontSize={"xl"}
 										fontFamily={"sans-serif"}
@@ -297,6 +311,12 @@ export default function Home() {
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
 								<Stack color={""}>
+									<Image
+										alt="slide-1"
+										src={"/slide-6.png"}
+										width={1000}
+										height={500}
+									/>
 									<Heading
 										fontSize={"xl"}
 										fontFamily={"sans-serif"}
@@ -339,6 +359,12 @@ export default function Home() {
 						<div className="splash" style={{ background }} />
 						<motion.div className="card" variants={cardVariants}>
 							<Stack mt={2} spacing={8}>
+								<Image
+									alt="slide-1"
+									src={"/slide-7.png"}
+									width={1000}
+									height={500}
+								/>
 								<Stack color={""}>
 									<Heading fontWeight={"black"} lineHeight={"10"}>
 										<Highlight
@@ -357,10 +383,18 @@ export default function Home() {
 									fontWeight={"medium"}
 									pb={16}
 								>
-									Pišite nam na upit@aos.ba, niste tip osobe koja piše
-									e-mail onda nam pišite na Viber ili WhatsApp +387 60
-									320 4600 ili nas pozovite, radujemo se Vašem
-									javljanju.
+									<Highlight
+										query={["upit@aos.ba", "+387 60 320 4600"]}
+										styles={{
+											color: "teal.300",
+											fontWeight: "black",
+										}}
+									>
+										Pišite nam na upit@aos.ba, niste tip osobe koja
+										piše e-mail onda nam pišite na Viber ili WhatsApp
+										+387 60 320 4600 ili nas pozovite, radujemo se
+										Vašem javljanju.
+									</Highlight>
 								</Text>
 							</Stack>
 						</motion.div>
